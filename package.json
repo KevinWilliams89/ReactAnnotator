@@ -1,0 +1,93 @@
+{
+  "name": "cordovatest3",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": ".",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cordova-ios": "^4.5.4",
+    "cordova-plugin-app-version": "^0.1.9",
+    "cordova-plugin-compat": "^1.2.0",
+    "cordova-plugin-console": "^1.1.0",
+    "cordova-plugin-device": "^1.1.7",
+    "cordova-plugin-dialogs": "^1.3.4",
+    "cordova-plugin-file": "^4.3.3",
+    "cordova-plugin-google-analytics": "^1.7.4",
+    "cordova-plugin-inappbrowser": "^1.7.2",
+    "cordova-plugin-network-information": "^1.3.4",
+    "cordova-plugin-screen-orientation": "^1.4.3",
+    "cordova-plugin-splashscreen": "^4.1.0",
+    "cordova-plugin-statusbar": "^2.4.2",
+    "emoji-strip": "^1.0.1",
+    "fh-js-sdk": "^3.0.5",
+    "ionic-plugin-keyboard": "^2.2.1",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-fastclick": "^3.0.2",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "react-transition-group": "^2.3.1"
+  },
+  "dependenciesComments": {
+    "react": "Standard React library",
+    "react-dom": "Standard React library",
+    "react-router-dom": "Standard React library for routing",
+    "react-scripts": "Scripts provided by create-react-app",
+    "react-transition-group": "Helps with animation transitions when changing pages. Used in src/routes.js"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "copy": "rsync -vra --delete build/ www/",
+    "lint": "eslint . --quiet",
+    "lintfix": "eslint . --quiet --fix",
+    "cycle": "npm run lintfix && npm run build && npm run copy",
+    "cycle-nolint": "npm run build && npm run copy"
+  },
+  "scriptsComments": {
+    "start": "Runs development build on a local server configured by create-react-app",
+    "build": "Builds the app for production to the build folder. Provided by create-react-app",
+    "test": "Runs the test watcher in an interactive mode. Provided by create-react-app",
+    "eject": "Un-abstracts the modules used by create-react-app",
+    "copy": "The /www folder is replaced with the contents of the /build folder",
+    "lint": "Runs ESlint against code directory - ignores warnings; ignores files in .eslintignore; options in .eslintrc.js; doesn't change code",
+    "lintfix": "Same as lint script but will fix any issues/prettify the code where it can",
+    "cycle": "Main script for building the app for production. Will stop if ESlint finds any errors",
+    "cycle-nolint": "Builds the app for production but no linting"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "prettier": "1.12.1"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-app-version": {},
+      "cordova-plugin-console": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-dialogs": {},
+      "cordova-plugin-file": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-network-information": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-google-analytics": {},
+      "cordova-plugin-screen-orientation": {},
+      "ionic-plugin-keyboard": {}
+    },
+    "platforms": [
+      "ios"
+    ]
+  }
+}
